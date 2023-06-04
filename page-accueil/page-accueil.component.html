@@ -1,0 +1,77 @@
+<header>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="/page-accueil"><font color="#008000"> OCP </font></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
+      aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item1">
+          <a class="nav-link" href="/page-accueil" [routerLink]="['/page-accueil']" [routerLinkActive]="['active']">Accueil</a>
+        </li>
+        <li class="nav-item2">
+          <a class="nav-link" href="/page-apropos"  [routerLink]="['/page-apropos']" [routerLinkActive]="['active']">À propos</a>
+        </li>
+        <li class="nav-item3">
+          <a class="nav-link" href="/connexion-utilisateur" [routerLink]="['/connexion-utilisateur']" [routerLinkActive]="['active']" >Connexion Employée</a>
+        </li>
+        <li class="nav-item4">
+          <a class="nav-link" href="/connexion-administrateur"[routerLink]="['/connexion-administrateur']" [routerLinkActive]="['active']">Connexion Administrateur</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+<style>
+  .jumbotron {
+    background-image: url("/assets/fields.gif");
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .jumbotron:before {
+    content: "";
+    background-color: rgba(0,0,0,0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.8;
+  }
+
+  .jumbotron h1, .jumbotron p {
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 0.5s ease-in-out;
+  }
+
+  h1 {
+    color: #fff;
+    font-size: 4rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+  }
+
+  p {
+    color: #BEBEBE;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    max-width: 800px;
+  }
+</style>
+
+<div class="jumbotron">
+  <div class="container">
+    <h1>Office Chérifien des Phosphates</h1>
+    <p style="margin: auto;">En tant que garant de 70% des réserves mondiales en phosphates, nous jouons un rôle vital dans l’accompagnement des agriculteurs afin de produire suffisamment et répondre aux besoins alimentaires des prochaines décennies. Notre mission est de nourrir le sol pour nourrir la planète.</p>
+  </div>
+</div>

@@ -1,0 +1,160 @@
+<header>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="/processus-list/+currentUser" [routerLink]="['/processus-list/',currentUser]"><font color="#008000"> OCP </font></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item1">
+            <a class="nav-link" href="/processus-list/+currentUser" [routerLink]="['/processus-list/',currentUser]" [routerLinkActive]="['active']">Liste des processus</a>
+          </li>
+          <li class="nav-item2">
+            <a class="nav-link" href="/ajouter-cnvab" [routerLink]="['/ajouter-cnvab']" [routerLinkActive]="['active']">Ajouter Convoyeur a bande</a>
+          </li>
+          <li class="nav-item2">
+              <a class="nav-link" href="/ajouter-dragline" [routerLink]="['/ajouter-dragline']" [routerLinkActive]="['active']">Ajouter Dragline</a>
+            </li>
+          <li class="nav-item3">
+              <a class="nav-link" href="/ajouter-moteur" [routerLink]="['/ajouter-moteur']" [routerLinkActive]="['active']">Ajouter Moteur</a>
+          </li>
+          <li class="nav-item4">
+            <a class="nav-link" href="/info-utilisateur/+currentUser" [routerLink]="['/info-utilisateur',currentUser]" [routerLinkActive]="['active']">Voir mes informations personnelles</a>
+        </li>
+          <li class="nav-item5">
+            <a class="nav-link" href="/deconnexion" [routerLink]="['/deconnexion']" [routerLinkActive]="['active']">Déconnexion</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+    <br>
+    <br>
+    <div class="container">
+      <h1 style="padding:10px 10px;bottom: 200px;">Formulaires de modification de Convoyeur a bande</h1>
+    
+      <br>
+        <div class="row justify-content-center" style="margin-bottom: 60px;">
+            <div class="col-15 col-md-10 col-lg-6 col-xl-7">
+                <div class="card bg-dark text-white border-0 rounded-3">
+    <form class="needs-validation" novalidate (ngSubmit)="onSubmit()" style="border-radius: 10px; padding: 20px; bottom: 20px;">
+    <div class="form-outline form-white mb-4">
+    <label for="idUtilisateur">Temperature:</label>
+    <input type="text" class="form-control" id="temperature" name="temperature" placeholder="Temperature" required [(ngModel)]="cnvab.temperature">
+    <div class="valid-feedback">Ok !</div>
+    <div class="invalid-feedback">Valeur incorrecte</div>
+  </div>
+
+  <div class="form-outline form-white mb-4">
+    <label for="idUtilisateur">Bruit:</label>
+    <input type="text" class="form-control" id="bruit" name="bruit" placeholder="Bruit" required [(ngModel)]="cnvab.bruit">
+    <div class="valid-feedback">Ok !</div>
+    <div class="invalid-feedback">Valeur incorrecte</div>
+  </div>
+
+  <div class="form-outline form-white mb-4">
+    <label for="idUtilisateur">Vibration:</label>
+    <input type="text" class="form-control" id="vibration" name="vibration" placeholder="Vibration" required [(ngModel)]="cnvab.vibration">
+    <div class="valid-feedback">Ok !</div>
+    <div class="invalid-feedback">Valeur incorrecte</div>
+  </div>
+
+  <div class="form-outline form-white mb-4">
+    <label for="idUtilisateur">Ville:</label>
+    <input type="text" class="form-control" id="ville" name="ville" placeholder="Ville" required [(ngModel)]="cnvab.ville">
+    <div class="valid-feedback">Ok !</div>
+    <div class="invalid-feedback">Valeur incorrecte</div>
+  </div>
+
+  <div class="form-outline form-white mb-4">
+    <label for="date">Date:</label>
+    <input type="date" class="form-control" id="date" name="date" required [(ngModel)]="cnvab.date">
+    <div class="valid-feedback">Ok !</div>
+    <div class="invalid-feedback">Valeur incorrecte</div>
+  </div>
+
+  <div class="form-outline form-white mb-4">
+    <label for="idUtilisateur">Inspection Visuelle:</label>
+    <input type="text" class="form-control" id="inspectionVisuelle" name="inspectionVisuelle" placeholder="Inspection Visuelle" required [(ngModel)]="cnvab.inspectionVisuelle">
+    <div class="valid-feedback">Ok !</div>
+    <div class="invalid-feedback">Valeur incorrecte</div>
+</div>
+<br>
+
+
+
+<button class="btn btn-primary" style="background-color: grey;margin-bottom: 0px;" type="submit">Envoyer</button>
+            
+
+            
+
+</form>
+
+     <!-- <br>
+      <br>
+      <h1 style="padding:20px 100px">Formulaire d'informations personnelles</h1>
+
+      <div class="container">
+        <br>
+        <div class="row justify-content-center" style="margin-bottom: 60px;">
+            <div class="col-15 col-md-10 col-lg-6 col-xl-7">
+              <div class="card bg-dark text-white border-0 rounded-3">
+                <form class="needs-validation" novalidate (ngSubmit)="onSubmit()" style="border-radius: 10px; padding: 20px; bottom: 20px;"></form>
+                <div class="form-row">
+                  <div class="form-outline form-white mb-4">
+                    <label for="idUtilisateur">E-mail:</label>
+                    <input type="text" class="form-control" id="idUtilisateur" name="idUtilisateur" placeholder="E-mail" required [(ngModel)]="utilisateur.idUtilisateur" value="{{utilisateur.idUtilisateur}}">
+                    <div class="valid-feedback">Ok !</div>
+                    <div class="invalid-feedback">Valeur incorrecte</div>
+                  </div>
+      
+                  <div class="form-outline form-white mb-4">
+                    <label for="idMotdePasse">Mot de Passe:</label>
+                    <input type="text" class="form-control" id="idMotdePasse" name="idMotdePasse" placeholder="Mot de Passe" required [(ngModel)]="utilisateur.idMotdePasse" value="{{utilisateur.idMotdePasse}}">
+                    <div class="valid-feedback">Ok !</div>
+                    <div class="invalid-feedback">Valeur incorrecte</div>
+                  </div>
+      
+                  <div class="form-outline form-white mb-4">
+                    <label for="nomComplet">Nom Complet:</label>
+                    <input type="text" class="form-control" id="nomComplet" name="nomComplet" placeholder="Nom Complet" required [(ngModel)]="utilisateur.nomComplet" value="{{utilisateur.nomComplet}}">
+                    <div class="valid-feedback">Ok !</div>
+                    <div class="invalid-feedback">Valeur incorrecte</div>
+                  </div>
+      
+                  <div class="form-outline form-white mb-4">
+                    <label for="numTelephone">Numéro de téléphone:</label>
+                    <input type="text" class="form-control" id="numTelephone" name="numTelephone" placeholder="Numéro de téléphone" required [(ngModel)]="utilisateur.numTelephone" value="{{utilisateur.numTelephone}}">
+                    <div class="valid-feedback">Ok !</div>
+                    <div class="invalid-feedback">Valeur incorrecte</div>
+                  </div>
+      
+                  <div class="form-outline form-white mb-4">
+                    <label for="grade">Grade:</label>
+                    <input type="text" class="form-control" id="grade" name="grade" placeholder="Grade" required [(ngModel)]="utilisateur.grade" value="{{utilisateur.grade}}">
+                    <div class="valid-feedback">Ok !</div>
+                    <div class="invalid-feedback">Valeur incorrecte</div>
+                  </div>
+      
+                  <div class="form-group form-white mb-4">
+                    <label for="sexe">Sexe:</label>
+                    <select #sexe class="form-control" id="sexe" name="sexe" placeholder="Sexe" [(ngModel)]="utilisateur.sexe" value="{{utilisateur.sexe}}" (change)="onSelected(sexe.value)" required>
+                        <option default value="1">Masculain</option>
+                        <option value="0">Féminin</option> 
+                    </select>
+                    <div class="valid-feedback">Ok !</div>
+                    <div class="invalid-feedback">Valeur incorrecte</div>
+                  </div>
+
+                  <div class="form-outline form-white mb-4">
+                    <label for="role">Role:</label>
+                    <input type="text" class="form-control" id="role" name="role" placeholder="role" required [(ngModel)]="utilisateur.role" value="{{utilisateur.grade}}">                   
+                    <div class="valid-feedback">Ok !</div>
+                    <div class="invalid-feedback">Valeur incorrecte</div>
+                  </div>
+                
+                  <br>
+                  <button class="btn btn-primary" style="background-color: grey;margin-bottom: 10px;" type="submit">Envoyer</button>    
+             
+        </div> -->

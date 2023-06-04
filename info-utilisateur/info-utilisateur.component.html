@@ -1,0 +1,183 @@
+<header>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="/processus-list/+currentUser" [routerLink]="['/processus-list/',currentUser]"><font color="#008000"> OCP </font></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item1">
+            <a class="nav-link" href="/processus-list/+currentUser" [routerLink]="['/processus-list/',currentUser]" [routerLinkActive]="['active']">Liste des processus</a>
+          </li>
+          <li class="nav-item2">
+            <a class="nav-link" href="/ajouter-cnvab" [routerLink]="['/ajouter-cnvab']" [routerLinkActive]="['active']">Ajouter Convoyeur a bande</a>
+          </li>
+          <li class="nav-item2">
+              <a class="nav-link" href="/ajouter-dragline" [routerLink]="['/ajouter-dragline']" [routerLinkActive]="['active']">Ajouter Dragline</a>
+            </li>
+          <li class="nav-item3">
+              <a class="nav-link" href="/ajouter-moteur" [routerLink]="['/ajouter-moteur']" [routerLinkActive]="['active']">Ajouter Moteur</a>
+          </li>
+          <li class="nav-item4">
+            <a class="nav-link" href="/info-utilisateur/+currentUser" [routerLink]="['/info-utilisateur',currentUser]" [routerLinkActive]="['active']">Voir mes informations personnelles</a>
+        </li>
+          <li class="nav-item5">
+            <a class="nav-link" href="/deconnexion" [routerLink]="['/deconnexion']" [routerLinkActive]="['active']">Déconnexion</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+<!-- 
+<br>
+        <br>
+        <h1 style="padding:20px 100px">Formulaire d'informations personnelles</h1>
+  
+        <div class="container">
+          <br>
+          <div class="row justify-content-center" style="margin-bottom: 60px;">
+              <div class="col-15 col-md-10 col-lg-6 col-xl-7">
+                <div class="card bg-dark text-white border-0 rounded-3">
+                  <tr *ngFor="let utilisateur of utilisateurListe" style="border-radius: 10px; padding: 20px; bottom: 20px;">
+                  <div class="form-row">
+                    <div class="form-outline form-white mb-4">
+                      <label for="idUtilisateur">E-mail:</label>
+                      <input type="text" class="form-control" id="idUtilisateur" name="idUtilisateur" placeholder="E-mail" required [(ngModel)]="utilisateur.idUtilisateur" value="{{utilisateur.idUtilisateur}}" readonly>
+                      <div class="valid-feedback">Ok !</div>
+                      <div class="invalid-feedback">Valeur incorrecte</div>
+                    </div>
+        
+                    <div class="form-outline form-white mb-4">
+                      <label for="idMotdePasse">Mot de Passe:</label>
+                      <input type="text" class="form-control" id="idMotdePasse" name="idMotdePasse" placeholder="Mot de Passe" required [(ngModel)]="utilisateur.idMotdePasse" value="{{utilisateur.idMotdePasse}}" readonly>
+                      <div class="valid-feedback">Ok !</div>
+                      <div class="invalid-feedback">Valeur incorrecte</div>
+                    </div>
+        
+                    <div class="form-outline form-white mb-4">
+                      <label for="nomComplet">Nom Complet:</label>
+                      <input type="text" class="form-control" id="nomComplet" name="nomComplet" placeholder="Nom Complet" required [(ngModel)]="utilisateur.nomComplet" value="{{utilisateur.nomComplet}}" readonly>
+                      <div class="valid-feedback">Ok !</div>
+                      <div class="invalid-feedback">Valeur incorrecte</div>
+                    </div>
+        
+                    <div class="form-outline form-white mb-4">
+                      <label for="numTelephone">Numéro de téléphone:</label>
+                      <input type="text" class="form-control" id="numTelephone" name="numTelephone" placeholder="Numéro de téléphone" required [(ngModel)]="utilisateur.numTelephone" value="{{utilisateur.numTelephone}}" readonly>
+                      <div class="valid-feedback">Ok !</div>
+                      <div class="invalid-feedback">Valeur incorrecte</div>
+                    </div>
+        
+                    <div class="form-outline form-white mb-4">
+                      <label for="grade">Grade:</label>
+                      <input type="text" class="form-control" id="grade" name="grade" placeholder="Grade" required [(ngModel)]="utilisateur.grade" value="{{utilisateur.grade}}" readonly>
+                      <div class="valid-feedback">Ok !</div>
+                      <div class="invalid-feedback">Valeur incorrecte</div>
+                    </div>
+  
+                    <div class="form-outline form-white mb-4">
+                      <label for="sexe">sexe:</label>
+                      <input type="text" class="form-control" id="sexe" name="sexe" placeholder="{{utilisateur.sexe ? 'Homme' : 'Femme'}}" required value="{{utilisateur.sexe ? 'Homme' : 'Femme'}}" readonly>
+                      <div class="valid-feedback">Ok !</div>
+                      <div class="invalid-feedback">Valeur incorrecte</div>
+                    </div>
+                    <div class="form-outline form-white mb-4">
+                      <label for="role">Role:</label>
+                      <input type="text" class="form-control" id="role" name="role" placeholder="role" required [(ngModel)]="utilisateur.role" value="{{utilisateur.grade}}" readonly>                   
+                      <div class="valid-feedback">Ok !</div>
+                      <div class="invalid-feedback">Valeur incorrecte</div>
+                    </div>
+
+                    <br>
+                  <button class="btn btn-primary" (click)="editUtilisateur(utilisateur)" style="background-color: grey;margin-bottom: 10px;" type="submit">MAJ des Information</button>    
+                  
+   
+          </div> -->
+
+          <style>
+            .profile-card {
+                border-radius: 10px;
+                padding: 20px;
+                margin-bottom: 20px;
+                background-color: #343a40;
+                color: white;
+            }
+        
+            .profile-card h2 {
+                margin-bottom: 20px;
+            }
+        
+            .profile-card label {
+                font-weight: bold;
+            }
+        
+            .profile-card input.form-control[readonly] {
+                background-color: transparent;
+                border: none;
+            }
+        </style>
+        
+        <h1 style="padding:20px 100px">Formulaire d'informations personnelles</h1>
+        <div class="container">
+            <br>
+            <div class="row justify-content-center" style="margin-bottom: 60px;">
+              <div class="col-15 col-md-10 col-lg-6 col-xl-7">
+                <div class="card bg-dark text-white border-0 rounded-3;">
+                  <tr *ngFor="let utilisateur of utilisateurListe" style="border-radius: 10px; padding: 20px; bottom: 20px;">
+                    <div class="profile-card">
+                        <h2>Profil utilisateur</h2>
+                        <div class="form-row">
+                          <div class="form-row">
+                            <div class="form-outline form-white mb-4 col-12">
+                                <label for="idUtilisateur">E-mail:</label>
+                                <input type="text" class="form-control" id="idUtilisateur" name="idUtilisateur" placeholder="E-mail" required [(ngModel)]="utilisateur.idUtilisateur" value="{{utilisateur.idUtilisateur}}" readonly style="color: ivory;">
+                                <div class="valid-feedback">Ok !</div>
+                                <div class="invalid-feedback">Valeur incorrecte</div>
+                            </div>
+                        </div>                        
+                            <div class="form-outline form-white mb-4 col-12">
+                                <label for="idMotdePasse">Mot de Passe:</label>
+                                <input type="text" class="form-control" id="idMotdePasse" name="idMotdePasse" placeholder="Mot de Passe" required [(ngModel)]="utilisateur.idMotdePasse" value="{{utilisateur.idMotdePasse}}" readonly style="color: ivory;">
+                                <div class="valid-feedback">Ok !</div>
+                                <div class="invalid-feedback">Valeur incorrecte</div>
+                            </div>
+                            <div class="form-outline form-white mb-4 col-12">
+                                <label for="nomComplet">Nom Complet:</label>
+                                <input type="text" class="form-control" id="nomComplet" name="nomComplet" placeholder="Nom Complet" required [(ngModel)]="utilisateur.nomComplet" value="{{utilisateur.nomComplet}}" readonly style="color: ivory;">
+                                <div class="valid-feedback">Ok !</div>
+                                <div class="invalid-feedback">Valeur incorrecte</div>
+                            </div>
+                            <div class="form-outline form-white mb-4 col-12">
+                                <label for="numTelephone">Numéro de téléphone:</label>
+                                <input type="text" class="form-control" id="numTelephone" name="numTelephone" placeholder="Numéro de téléphone" required [(ngModel)]="utilisateur.numTelephone" value="{{utilisateur.numTelephone}}" readonly style="color: ivory;">
+                                <div class="valid-feedback">Ok !</div>
+                                <div class="invalid-feedback">Valeur incorrecte</div>
+                            </div>
+                            <div class="form-outline form-white mb-4 col-12">
+                                <label for="grade">Grade:</label>
+                                <input type="text" class="form-control" id="grade" name="grade" placeholder="Grade" required [(ngModel)]="utilisateur.grade" value="{{utilisateur.grade}}" readonly  style="color: ivory;">
+                                <div class="valid-feedback">Ok !</div>
+                                <div class="invalid-feedback">Valeur incorrecte</div>
+                              </div>
+            
+                              <div class="form-outline form-white mb-4">
+                                <label for="sexe">sexe:</label>
+                                <input type="text" class="form-control" id="sexe" name="sexe" placeholder="{{utilisateur.sexe ? 'Homme' : 'Femme'}}" required value="{{utilisateur.sexe ? 'Homme' : 'Femme'}}" readonly  style="color: ivory;">
+                                <div class="valid-feedback">Ok !</div>
+                                <div class="invalid-feedback">Valeur incorrecte</div>
+                              </div>
+                              <div class="form-outline form-white mb-4">
+                                <label for="role">Role:</label>
+                                <input type="text" class="form-control" id="role" name="role" placeholder="role" required [(ngModel)]="utilisateur.role" value="{{utilisateur.grade}}" readonly  style="color: ivory;">                   
+                                <div class="valid-feedback">Ok !</div>
+                                <div class="invalid-feedback">Valeur incorrecte</div>
+                              </div>
+          
+                              <br>
+                            <button class="btn btn-primary" (click)="editUtilisateur(utilisateur)" style="background-color: grey;margin-bottom: 10px;" type="submit">MAJ des Information</button>    
+                            
+             
+                    </div>
+        
