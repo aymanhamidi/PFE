@@ -1,0 +1,89 @@
+<header>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="/processus-list/+currentUser" [routerLink]="['/processus-list/',currentUser]"><font color="#008000"> OCP </font></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item1">
+            <a class="nav-link" href="/processus-list/+currentUser" [routerLink]="['/processus-list/',currentUser]" [routerLinkActive]="['active']">Liste des processus</a>
+          </li>
+          <li class="nav-item2">
+            <a class="nav-link" href="/ajouter-cnvab" [routerLink]="['/ajouter-cnvab']" [routerLinkActive]="['active']">Ajouter Convoyeur a bande</a>
+          </li>
+          <li class="nav-item2">
+              <a class="nav-link" href="/ajouter-dragline" [routerLink]="['/ajouter-dragline']" [routerLinkActive]="['active']">Ajouter Dragline</a>
+            </li>
+          <li class="nav-item3">
+              <a class="nav-link" href="/ajouter-moteur" [routerLink]="['/ajouter-moteur']" [routerLinkActive]="['active']">Ajouter Moteur</a>
+          </li>
+          <li class="nav-item4">
+            <a class="nav-link" href="/info-utilisateur/+currentUser" [routerLink]="['/info-utilisateur',currentUser]" [routerLinkActive]="['active']">Voir mes informations personnelles</a>
+        </li>
+          <li class="nav-item5">
+            <a class="nav-link" href="/deconnexion" [routerLink]="['/deconnexion']" [routerLinkActive]="['active']">Déconnexion</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+    <br>
+    <br>
+    <div class="container" style="border-radius: 10px; padding: 20px; bottom: 10px;">
+      <h1 style="padding:10px 10px;bottom: 200px; text-emphasis-color: white;">Formulaire Ajouter Moteur</h1>
+    
+      <br>
+        <div class="row justify-content-center" style="margin-bottom: 60px;">
+            <div class="col-15 col-md-10 col-lg-6 col-xl-7">
+                <div class="card bg-dark text-white border-0 rounded-3">
+                <form class="needs-validation" novalidate (ngSubmit)="onSubmit()" style="border-radius: 10px; padding: 20px; bottom: 10px;">
+
+
+                  <div class="form-outline form-white mb-4">
+                    <label for="idUtilisateur">Temperature:</label>
+                    <input type="text" class="form-control" id="temperature" name="temperature" placeholder="Temperature" required [(ngModel)]="moteur.temperature">
+                    <div class="valid-feedback">Ok !</div>
+                    <div class="invalid-feedback">Valeur incorrecte</div>
+                </div>
+
+                <div class="form-outline form-white mb-4">
+                    <label for="idUtilisateur">Consommation:</label>
+                    <input type="text" class="form-control" id="consommation" name="consommation" placeholder="Consommation" required [(ngModel)]="moteur.consommation">
+                    <div class="valid-feedback">Ok !</div>
+                    <div class="invalid-feedback">Valeur incorrecte</div>
+                </div>
+
+                <div class="form-outline form-white mb-4">
+                  <label for="idUtilisateur">Vitesse:</label>
+                  <input type="text" class="form-control" id="vitesse" name="vitesse" placeholder="Vitesse" required [(ngModel)]="moteur.vitesse">
+                  <div class="valid-feedback">Ok !</div>
+                  <div class="invalid-feedback">Valeur incorrecte</div>
+              </div>
+
+                <div class="form-outline form-white mb-4">
+                  <label for="idUtilisateur">Inspection Visuelle:</label>
+                  <input type="text" class="form-control" id="inspectionVisuelle" name="inspectionVisuelle" placeholder="Inspection Visuelle" required [(ngModel)]="moteur.inspectionVisuelle">
+                  <div class="valid-feedback">Ok !</div>
+                  <div class="invalid-feedback">Valeur incorrecte</div>
+              </div>
+                
+                <div class="form-outline form-white mb-4">
+                    <label for="idUtilisateur">Ville:</label>
+                    <input type="text" class="form-control" id="ville" name="ville" placeholder="Ville" required [(ngModel)]="moteur.ville">
+                    <div class="valid-feedback">Ok !</div>
+                    <div class="invalid-feedback">Valeur incorrecte</div>
+                </div>
+
+                <div class="form-outline form-white mb-4">
+                  <label for="date">Date:</label>
+                  <input type="date" class="form-control" id="date" name="date" required [(ngModel)]="moteur.date">
+                  <div class="valid-feedback">Ok !</div>
+                  <div class="invalid-feedback">Valeur incorrecte</div>
+              </div>
+
+                <br>
+                    <button class="btn btn-primary" style="background-color: grey;margin-bottom: 20px;" type="submit">Envoyer</button>
+            
+   
