@@ -1,0 +1,109 @@
+<header>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="/dashboard"><font color="#008000"> OCP </font></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item1">
+            <a class="nav-link" href="/dashboard"[routerLink]="['/dashboard']" [routerLinkActive]="['active']">Dashboard</a>
+          </li>
+          <li class="nav-item2">
+            <a class="nav-link" href="/processus-listu"[routerLink]="['/processus-listu']" [routerLinkActive]="['active']">Liste des processus</a>
+          </li>
+          <li class="nav-item3">
+              <a class="nav-link" href="/afficher-utilisateur" [routerLink]="['/afficher-utilisateur']" [routerLinkActive]="['active']">Liste des employées</a>
+            </li>
+          <li class="nav-item4">
+            <a class="nav-link" href="/ajouter-utilisateur" [routerLink]="['/ajouter-utilisateur']" [routerLinkActive]="['active']">Ajouter un employée</a>
+          </li>
+          <li class="nav-item5">
+            <a class="nav-link" href="/page-statistique" [routerLink]="['/page-statistique']" [routerLinkActive]="['active']">Statistiques</a>
+          </li>
+          <li class="nav-item6">
+            <a class="nav-link" href="/deconnexionad" [routerLink]="['/deconnexionad']" [routerLinkActive]="['active']">Déconnexion</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+<!-- <h1 style="padding:20px 100px; margin-top: 40px;">Convoyeur a bande</h1>
+  <div class="chart" style="margin-top: 100px;padding:20px">
+    <div class="line" [chart]="lineChart"></div>
+  </div>
+  <h1 style="padding:20px 100px; margin-top: 40px;">Dragline</h1>
+  <div class="chart" style="margin-top: 100px;padding:20px">
+    <div class="line" [chart]="lineChart1"></div>
+  </div>
+  <h1 style="padding:20px 100px; margin-top: 40px;">Moteur</h1>
+  <div class="chart" style="margin-top: 100px;padding:20px">
+    <div class="line" [chart]="lineChart2"></div>
+  </div> -->
+  
+
+    <head>
+      
+      <style>
+        body {
+          background-color: #f2f2f2;
+          font-family: Arial, sans-serif;
+        }
+        h1 {
+          color: #444;
+          font-size: 2.5rem;
+          text-align: center;
+          padding: 20px;
+          margin-top: 0px;
+          text-shadow: 2px 2px #eee;
+          animation: slideIn 1s ease-in-out;
+        }
+        .chart {
+          background-color: #fff;
+          border-radius: 10px;
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+          margin-top: 100px;
+          padding: 20px;
+          animation: fadeIn 1s ease-in-out;
+        }
+        .line {
+          height: 300px;
+        }
+        @keyframes slideIn {
+          from {
+            transform: translateY(-100%);
+          }
+          to {
+            transform: translateY(0%);
+          }
+        }
+        @keyframes fadeIn {
+          from {
+            opacity: 0;
+          }
+          to {
+            opacity: 1;
+          }
+        }
+      </style>
+    </head>
+    <body>
+      <h1>Convoyeur a bande</h1>
+      <div class="chart">
+        <div class="line" [chart]="lineChart"></div>
+      </div>
+      <h1>Dragline</h1>
+      <div class="chart">
+        <div class="line" [chart]="lineChart1"></div>
+      </div>
+      <h1>Moteur</h1>
+      <div class="chart">
+        <div class="line" [chart]="lineChart2"></div>
+      </div>
+    </body>
+    <br>
+   <br>
+ 
+  
+

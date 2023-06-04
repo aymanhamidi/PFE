@@ -1,0 +1,123 @@
+<header>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="/dashboard"><font color="#008000"> OCP </font></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item1">
+            <a class="nav-link" href="/dashboard"[routerLink]="['/dashboard']" [routerLinkActive]="['active']">Dashboard</a>
+          </li>
+          <li class="nav-item2">
+            <a class="nav-link" href="/processus-listu"[routerLink]="['/processus-listu']" [routerLinkActive]="['active']">Liste des processus</a>
+          </li>
+          <li class="nav-item3">
+              <a class="nav-link" href="/afficher-utilisateur" [routerLink]="['/afficher-utilisateur']" [routerLinkActive]="['active']">Liste des employées</a>
+            </li>
+          <li class="nav-item4">
+            <a class="nav-link" href="/ajouter-utilisateur" [routerLink]="['/ajouter-utilisateur']" [routerLinkActive]="['active']">Ajouter un employée</a>
+          </li>
+          <li class="nav-item5">
+            <a class="nav-link" href="/page-statistique" [routerLink]="['/page-statistique']" [routerLinkActive]="['active']">Statistiques</a>
+          </li>
+          <li class="nav-item6">
+            <a class="nav-link" href="/deconnexionad" [routerLink]="['/deconnexionad']" [routerLinkActive]="['active']">Déconnexion</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+    <br>
+    <h1 style="padding:20px 100px">Liste des processus</h1>
+   
+   <h2 style="padding:20px 130px">Liste des CNVAB</h2>
+   <table class="table table-striped">
+     <thead>
+       <tr>
+         <th>ID</th>
+         <th>Température</th>
+         <th>Bruit</th>
+         <th>Vibration</th>
+         <th>Inspection Visuelle</th>
+         <th>Date</th>
+         <th>Ville</th>
+         
+       </tr>
+     </thead>
+     <tbody>
+       <tr *ngFor="let cnvab of cnvabList">
+         <td>{{cnvab.id}}</td>
+         <td>{{cnvab.temperature}}</td>
+         <td>{{cnvab.bruit}}</td>
+         <td>{{cnvab.vibration}}</td>
+         <td>{{cnvab.inspectionVisuelle}}</td>
+         <td>{{cnvab.date | date:'mediumDate'}}</td>
+         <td>{{cnvab.ville}}</td>
+        
+       </tr>
+     </tbody>
+   </table>
+   
+   <h2 style="padding:20px 130px">Liste des Draglines</h2>
+   <table class="table table-striped">
+     <thead>
+       <tr>
+        <th>id</th>
+        <th>Température</th>
+        <th>Poids</th>
+        <th>Rotation</th>
+        <th>Inspection Visuelle</th>
+        <th>Date</th>
+        <th>Ville</th>
+         
+       </tr>
+     </thead>
+     <tbody>
+       <tr *ngFor="let dragline of draglineList">
+        <td>{{dragline.id}}</td>
+        <td>{{dragline.temperature}}</td>
+        <td>{{dragline.poids}}</td>
+        <td>{{dragline.rotation}}</td>
+        <td>{{dragline.inspectionVisuelle}}</td>
+        <td>{{dragline.date | date:'mediumDate'}}</td>
+        <td>{{dragline.ville}}</td>
+        
+       </tr>
+     </tbody>
+   </table>
+   <br>
+   <h2 style="padding:20px 130px">Liste des Moteurs</h2>
+   <table class="table table-striped">
+     <thead>
+       <tr>
+         <th>id</th>
+         <th>Température</th>
+         <th>Consommation</th>
+         <th>Vitesse</th>
+         <th>Inspection Visuelle</th>
+         <th>Date</th>
+         <th>Ville</th>
+         
+       </tr>
+     </thead>
+     <tbody>
+       <tr *ngFor="let moteur of moteurList">
+        <td>{{moteur.id}}</td>
+        <td>{{moteur.temperature}}</td>
+        <td>{{moteur.vitesse}}</td>
+        <td>{{moteur.consommation}}</td>
+        <td>{{moteur.inspectionVisuelle}}</td>
+        <td>{{moteur.date | date:'mediumDate'}}</td>
+        <td>{{moteur.ville}}</td>
+        
+       </tr>
+     </tbody>
+   </table>
+   <br>
+   <br>
+   <br>
+   
+    
+    
